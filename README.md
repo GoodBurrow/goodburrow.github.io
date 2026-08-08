@@ -1,7 +1,7 @@
-# Good Burrow
+# Good Burrow website
 
-Public sales and demonstration website for Good Burrow.
+This public repository contains the Good Burrow managed-website sales site,
+its fictional demonstrations, and the Burrowmarks marketing page.
 
-The site is intentionally static and hosted by GitHub Pages. Customer editing,
-private previews, payments, and operations remain in the separate managed
-engine and are not exposed in this repository.
+Customer editing, private previews, payments, and operations remain in
+separate private systems and are not exposed in this repository.
