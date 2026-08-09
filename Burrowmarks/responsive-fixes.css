@@ -19,6 +19,10 @@
   object-fit: contain;
 }
 
+.preview aside > small {
+  margin-bottom: 146px;
+}
+
 @media (max-width: 470px) {
   .preview {
     grid-template-columns: 145px minmax(0, 1fr);
@@ -39,5 +43,9 @@
   .mole {
     width: calc(100% - 14px);
     max-height: 106px;
+  }
+
+  .preview aside > small {
+    margin-bottom: 118px;
   }
 }
