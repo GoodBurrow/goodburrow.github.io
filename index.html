@@ -3,21 +3,227 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Good Burrow</title>
-    <meta name="description" content="Small software for people who want a tool to do one clear job well.">
+    <title>Good Burrow | Apps and browser tools</title>
+    <meta name="description" content="Good Burrow makes independent apps and browser tools, including Burrowmarks for Firefox and the Extension License Kit.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://goodburrow.github.io/">
     <style>
-      :root{color-scheme:dark;--ink:#111817;--panel:#192422;--paper:#f5f1e8;--muted:#b8c3bc;--line:rgba(245,241,232,.16);--moss:#9fbd7d;--gold:#e7bb61}*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.shell{width:min(1120px,calc(100% - 40px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}.brand{font-size:1.08rem;font-weight:760;letter-spacing:-.035em}.nav-links{display:flex;gap:20px;color:var(--muted);font-size:.92rem}.nav-links a:hover{color:var(--paper)}.hero{padding:105px 0 90px}.eyebrow{margin:0 0 18px;color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}h1{max-width:820px;margin:0;font-size:clamp(3.2rem,7vw,6.55rem);line-height:.92;letter-spacing:-.075em}.intro{max-width:610px;margin:28px 0 0;color:var(--muted);font-size:1.17rem}.products{padding:0 0 92px}.products h2{margin:0 0 25px;font-size:1.15rem;letter-spacing:-.02em}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{position:relative;min-height:400px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:31px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.card:hover{border-color:rgba(231,187,97,.53);transform:translateY(-2px);transition:.18s ease}.card-top{position:relative;z-index:1}.type{margin:0;color:var(--gold);font:700 .76rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase}.card h3{max-width:450px;margin:19px 0 11px;font-size:clamp(2rem,4vw,3.3rem);line-height:.98;letter-spacing:-.06em}.card p{max-width:420px;margin:0;color:var(--muted);font-size:1.02rem}.card-link{position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px;width:max-content;margin-top:26px;padding:10px 13px;border:1px solid var(--line);border-radius:8px;font-weight:700}.card-link:hover{background:rgba(245,241,232,.07)}.mole-card{background:linear-gradient(135deg,#2b342d,#1a211d 70%)}.mole-card img{position:absolute;right:-13px;bottom:-20px;width:270px;max-width:56%;filter:drop-shadow(0 18px 19px rgba(0,0,0,.28))}.kit-card{background:linear-gradient(135deg,#1c2c28,#121c1a 70%)}.kit-card:after{content:"";position:absolute;right:-70px;bottom:-70px;width:260px;height:260px;border:1px solid rgba(159,189,125,.3);border-radius:50%}.files{position:relative;z-index:1;display:grid;gap:8px;width:min(100%,350px);margin-top:30px}.file{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:rgba(10,17,16,.28);font:600 .78rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace}.file b{color:var(--moss)}.note{display:grid;grid-template-columns:auto 1fr;gap:17px;align-items:start;padding:28px 0 80px;border-top:1px solid var(--line);color:var(--muted)}.note strong{color:var(--paper)}footer{display:flex;justify-content:space-between;gap:24px;padding:25px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}footer a{color:var(--paper)}@media(max-width:720px){.nav-links{display:none}.hero{padding:75px 0 64px}.grid{grid-template-columns:1fr}.card{min-height:370px}.mole-card img{width:235px}.note{grid-template-columns:1fr;gap:5px}footer{display:grid}}
+      :root {
+        color-scheme: light;
+        --paper: #f4ecdf;
+        --paper-deep: #e8dac6;
+        --cream: #fffaf2;
+        --ink: #292923;
+        --forest: #294239;
+        --forest-deep: #172d27;
+        --moss: #718269;
+        --clay: #b7664f;
+        --clay-soft: #d99b7d;
+        --gold: #d9a84f;
+        --line: rgba(41, 41, 35, .16);
+        --shadow: 0 24px 70px rgba(58, 45, 31, .13);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 85% 8%, rgba(217, 168, 79, .16), transparent 25rem),
+          linear-gradient(180deg, var(--paper) 0, #f7f1e7 65%, var(--paper) 100%);
+        color: var(--ink);
+        font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      a { color: inherit; text-decoration: none; }
+      img { display: block; max-width: 100%; }
+      .shell { width: min(1160px, calc(100% - 42px)); margin-inline: auto; }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(41, 41, 35, .1);
+        background: rgba(244, 236, 223, .82);
+        backdrop-filter: blur(18px) saturate(130%);
+      }
+      .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 1.05rem; font-weight: 800; letter-spacing: -.025em; }
+      .brand-mark { position: relative; width: 35px; height: 35px; overflow: hidden; border-radius: 50% 50% 44% 44%; background: var(--forest); box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); }
+      .brand-mark::before { content: ""; position: absolute; inset: 8px 7px 0; border-radius: 50% 50% 0 0; background: var(--paper); }
+      .brand-mark::after { content: ""; position: absolute; left: 12px; bottom: 0; width: 11px; height: 13px; border-radius: 50% 50% 0 0; background: var(--clay); }
+      .nav-links { display: flex; align-items: center; gap: 25px; color: #55584f; font-size: .91rem; font-weight: 650; }
+      .nav-links a { transition: color .18s ease; }
+      .nav-links a:hover { color: var(--clay); }
+
+      .hero { padding: 88px 0 102px; }
+      .hero-grid { display: grid; grid-template-columns: minmax(0, 1.03fr) minmax(370px, .97fr); gap: clamp(52px, 8vw, 108px); align-items: center; }
+      .label { margin: 0 0 20px; color: var(--clay); font-size: .74rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+      h1, h2, h3 { text-wrap: balance; }
+      h1 { margin: 0; font-size: clamp(4.2rem, 9vw, 7.8rem); line-height: .84; letter-spacing: -.082em; }
+      .hero-copy { max-width: 620px; margin: 32px 0 0; color: #55584f; font-size: clamp(1.08rem, 1.7vw, 1.28rem); line-height: 1.7; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+      .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; font-weight: 760; transition: transform .18s ease, background .18s ease, border-color .18s ease; }
+      .button:hover { transform: translateY(-2px); }
+      .button.primary { border-color: var(--forest); background: var(--forest); color: var(--cream); box-shadow: 0 12px 30px rgba(41, 66, 57, .2); }
+      .button.secondary:hover { border-color: rgba(183, 102, 79, .5); background: rgba(255,250,242,.55); }
+
+      .burrow-scene { position: relative; min-height: 510px; isolation: isolate; }
+      .hill { position: absolute; inset: 27px 0 0; overflow: hidden; border-radius: 52% 52% 28px 28px / 35% 35% 28px 28px; background: linear-gradient(150deg, #718269 0, #3e5b4e 48%, #294239 100%); box-shadow: var(--shadow); }
+      .hill::before, .hill::after { content: ""; position: absolute; border: 1px solid rgba(255, 250, 242, .2); border-radius: 50%; }
+      .hill::before { width: 430px; height: 230px; left: -80px; top: 34px; transform: rotate(-12deg); }
+      .hill::after { width: 390px; height: 210px; right: -120px; bottom: 5px; transform: rotate(13deg); }
+      .window { position: absolute; z-index: 2; left: 50%; bottom: 0; width: 68%; height: 82%; transform: translateX(-50%); border: 14px solid #d5b999; border-bottom-width: 20px; border-radius: 48% 48% 18px 18px / 32% 32% 18px 18px; background: linear-gradient(155deg, rgba(255,255,255,.38), rgba(255,250,242,.9) 45%, #e9ddcb 100%); box-shadow: inset 0 0 0 1px rgba(41,41,35,.11), 0 22px 50px rgba(26, 40, 34, .3); }
+      .window::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(41,41,35,.16); }
+      .window::after { content: ""; position: absolute; left: 0; right: 0; top: 54%; height: 1px; background: rgba(41,41,35,.13); }
+      .shelf { position: absolute; z-index: 3; left: 13%; right: 13%; bottom: 13%; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; padding: 0 5%; }
+      .shelf::after { content: ""; position: absolute; left: 0; right: 0; bottom: -12px; height: 13px; border-radius: 5px; background: #9a664f; box-shadow: 0 8px 16px rgba(55,37,28,.22); }
+      .pot { width: 64px; height: 54px; border-radius: 9px 9px 22px 22px; background: var(--clay); }
+      .plant { position: relative; width: 86px; height: 125px; }
+      .plant i { position: absolute; left: 42px; bottom: 45px; width: 3px; height: 76px; background: var(--forest); transform-origin: bottom; }
+      .plant i:nth-child(2) { transform: rotate(-28deg); height: 60px; }
+      .plant i:nth-child(3) { transform: rotate(30deg); height: 66px; }
+      .plant i::before, .plant i::after { content: ""; position: absolute; width: 23px; height: 39px; border-radius: 80% 18% 75% 18%; background: #718269; }
+      .plant i::before { left: -21px; top: 12px; transform: rotate(-20deg); }
+      .plant i::after { left: 1px; top: 30px; transform: scaleX(-1) rotate(-18deg); }
+      .stone { width: 112px; height: 72px; border-radius: 50% 50% 16px 16px; background: linear-gradient(145deg, #d9c3a7, #b99b7a); box-shadow: inset 0 1px rgba(255,255,255,.4); }
+      .scene-note { position: absolute; z-index: 4; right: -18px; top: 0; width: 195px; padding: 17px 18px; border: 1px solid rgba(41,41,35,.12); border-radius: 16px; background: rgba(255,250,242,.94); box-shadow: 0 18px 45px rgba(58,45,31,.15); color: #5c5c52; font-size: .82rem; }
+      .scene-note strong { display: block; margin-bottom: 4px; color: var(--forest-deep); font-size: .93rem; }
+
+      .products { padding: 94px 0 112px; border-top: 1px solid var(--line); }
+      .section-head { display: grid; grid-template-columns: 1fr minmax(280px, 480px); gap: 40px; align-items: end; margin-bottom: 38px; }
+      .section-head h2, .about h2 { margin: 0; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: .96; letter-spacing: -.06em; }
+      .section-head p { margin: 0; color: #606257; font-size: 1.02rem; }
+      .product-list { display: grid; grid-template-columns: 1.16fr .84fr; gap: 20px; }
+      .product { position: relative; overflow: hidden; min-height: 500px; padding: 34px; border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 14px 42px rgba(58,45,31,.08); transition: transform .2s ease, box-shadow .2s ease; }
+      .product:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+      .product-tag { margin: 0 0 22px; font-size: .72rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+      .product h3 { margin: 0; font-size: clamp(2.25rem, 4vw, 4rem); line-height: .95; letter-spacing: -.06em; }
+      .product-copy { position: relative; z-index: 2; max-width: 465px; }
+      .product-copy > p:not(.product-tag) { max-width: 410px; margin: 20px 0 0; font-size: 1.06rem; }
+      .product .button { margin-top: 28px; }
+      .burrowmarks { background: #d7a583; color: #2e2924; }
+      .burrowmarks .product-tag { color: #704334; }
+      .burrowmarks img { position: absolute; right: -25px; bottom: -22px; width: min(360px, 58%); filter: drop-shadow(0 22px 28px rgba(78,50,37,.26)); }
+      .burrowmarks .button { border-color: rgba(46,41,36,.28); background: rgba(255,250,242,.68); }
+      .license { background: var(--forest-deep); color: var(--cream); }
+      .license .product-tag { color: #cbb888; }
+      .license .product-copy > p:not(.product-tag) { color: #c7d1ca; }
+      .license .button { border-color: rgba(255,250,242,.22); background: rgba(255,250,242,.08); }
+      .kit-list { position: relative; z-index: 2; display: grid; gap: 9px; width: min(100%, 370px); margin: 38px 0 0; }
+      .kit-list span { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 14px; border: 1px solid rgba(255,250,242,.13); border-radius: 10px; background: rgba(255,255,255,.035); color: #dce3de; font: 650 .78rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .kit-list b { color: #d9a84f; font-weight: 750; }
+      .license::after { content: ""; position: absolute; right: -145px; bottom: -155px; width: 390px; height: 390px; border: 1px solid rgba(217,168,79,.2); border-radius: 50%; box-shadow: 0 0 0 42px rgba(217,168,79,.035), 0 0 0 84px rgba(217,168,79,.025); }
+
+      .about-wrap { padding: 0 0 108px; }
+      .about { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(50px, 9vw, 120px); padding: clamp(42px, 7vw, 76px); border-radius: 30px; background: var(--cream); box-shadow: 0 18px 55px rgba(58,45,31,.08); }
+      .about-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; color: #57594f; }
+      .about-copy p { margin: 0; }
+      .about-copy strong { display: block; margin-bottom: 8px; color: var(--forest-deep); font-size: .98rem; }
+
+      footer { padding: 26px 0 42px; border-top: 1px solid var(--line); }
+      .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 25px; color: #66675e; font-size: .88rem; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+      .footer-links a:hover { color: var(--clay); }
+
+      @media (max-width: 860px) {
+        .hero { padding-top: 70px; }
+        .hero-grid { grid-template-columns: 1fr; }
+        .burrow-scene { width: min(100%, 600px); min-height: 480px; }
+        .scene-note { right: 10px; }
+        .section-head { grid-template-columns: 1fr; gap: 16px; }
+        .product-list { grid-template-columns: 1fr; }
+        .product { min-height: 460px; }
+        .about { grid-template-columns: 1fr; gap: 36px; }
+      }
+      @media (max-width: 620px) {
+        .shell { width: min(100% - 28px, 1160px); }
+        .nav { min-height: 68px; }
+        .nav-links a:not(:first-child) { display: none; }
+        .hero { padding: 56px 0 74px; }
+        h1 { font-size: clamp(4rem, 22vw, 6rem); }
+        .hero-copy { margin-top: 25px; }
+        .burrow-scene { min-height: 390px; }
+        .window { width: 76%; }
+        .scene-note { top: -10px; width: 170px; }
+        .products { padding: 72px 0 82px; }
+        .product { min-height: 430px; padding: 27px; border-radius: 22px; }
+        .burrowmarks img { width: 245px; max-width: 62%; }
+        .about { padding: 32px 26px; }
+        .about-copy { grid-template-columns: 1fr; gap: 25px; }
+        .footer-row { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition: none !important; }
+      }
     </style>
   </head>
   <body>
-    <header class="shell nav"><a class="brand" href="/">Good Burrow</a><nav class="nav-links" aria-label="Main navigation"><a href="#products">Products</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></header>
+    <header class="site-header">
+      <div class="shell nav">
+        <a class="brand" href="/" aria-label="Good Burrow home"><span class="brand-mark" aria-hidden="true"></span>Good Burrow</a>
+        <nav class="nav-links" aria-label="Main navigation"><a href="#products">Products</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+      </div>
+    </header>
+
     <main>
-      <section class="shell hero"><p class="eyebrow">Independent software</p><h1>Small software with a clear job.</h1><p class="intro">Good Burrow makes focused tools for people who prefer a useful product over a complicated platform. There are two products here today.</p></section>
-      <section class="shell products" id="products"><h2>Products</h2><div class="grid"><a class="card mole-card" href="/Burrowmarks/"><div class="card-top"><p class="type">Firefox extension</p><h3>Burrowmarks</h3><p>A private bookmark vault for Firefox. Keep selected links outside ordinary bookmarks and suggestions.</p></div><span class="card-link">See Burrowmarks <span aria-hidden="true">→</span></span><img src="/Burrowmarks/mole-character.png" alt="Burrowmarks mole character"></a><a class="card kit-card" href="/extension-license-kit/"><div class="card-top"><p class="type">Developer tool</p><h3>Extension License Kit</h3><p>Code and setup notes for taking a Stripe payment, issuing a license, and checking it in a paid browser extension.</p></div><div class="files" aria-label="Kit contents"><div class="file"><span>purchase fulfillment</span><b>Stripe</b></div><div class="file"><span>license check</span><b>offline</b></div><div class="file"><span>sample extension</span><b>Firefox + Chromium</b></div></div><span class="card-link">See the License Kit <span aria-hidden="true">→</span></span></a></div></section>
-      <section class="shell note"><strong>About Good Burrow</strong><span>Each product stands on its own. Product pages explain what they do, how they are priced, and where to get help.</span></section>
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <p class="label">Independent software studio</p>
+            <h1>Good<br>Burrow</h1>
+            <p class="hero-copy">We make apps and browser tools that are useful from the first minute and comfortable to keep around. Good Burrow is new. We are starting with a Firefox extension and the licensing kit we built alongside it.</p>
+            <div class="hero-actions"><a class="button primary" href="#products">View the products</a><a class="button secondary" href="#about">About Good Burrow</a></div>
+          </div>
+          <div class="burrow-scene" aria-label="A warm glass room built into a green hillside">
+            <div class="hill"></div>
+            <div class="window"></div>
+            <div class="shelf"><div class="plant" aria-hidden="true"><i></i><i></i><i></i><div class="pot"></div></div><div class="stone" aria-hidden="true"></div></div>
+            <div class="scene-note"><strong>Made independently</strong>Small products, direct support, and no outside investors.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" id="products">
+        <div class="shell">
+          <div class="section-head"><h2>Products</h2><p>Burrowmarks is available for Firefox. The Extension License Kit will open for purchase after its checkout is approved.</p></div>
+          <div class="product-list">
+            <a class="product burrowmarks" href="/Burrowmarks/">
+              <div class="product-copy">
+                <p class="product-tag">Firefox extension</p>
+                <h3>Burrowmarks</h3>
+                <p>Keep selected links in an encrypted vault instead of ordinary Firefox bookmarks. Five links are free. Unlimited links and folders cost $14.99 once.</p>
+                <span class="button">Open Burrowmarks</span>
+              </div>
+              <img src="/Burrowmarks/mole-character.png" alt="Burrowmarks mole character">
+            </a>
+
+            <a class="product license" href="/extension-license-kit/">
+              <div class="product-copy">
+                <p class="product-tag">For extension developers</p>
+                <h3>Extension License Kit</h3>
+                <p>Add one-time purchases and offline license checks to a browser extension. The kit includes working code, a sample extension, tests, and setup notes.</p>
+                <div class="kit-list" aria-label="License Kit contents"><span>Payment fulfillment <b>Stripe</b></span><span>License checks <b>Offline</b></span><span>Sample extension <b>Firefox + Chromium</b></span></div>
+                <span class="button">Review the License Kit</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-wrap" id="about">
+        <div class="shell about">
+          <h2>About Good Burrow</h2>
+          <div class="about-copy">
+            <p><strong>Who makes it</strong>Good Burrow is a small independent studio. Questions and support come directly to the people responsible for the products.</p>
+            <p><strong>What matters here</strong>Prices and limits should be easy to find. Accounts, subscriptions, and tracking should only exist when a product truly needs them. Your files should remain usable and exportable.</p>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="shell"><span>© Good Burrow</span><span><a href="/Burrowmarks/">Burrowmarks</a> · <a href="/extension-license-kit/">Extension License Kit</a></span></footer>
+
+    <footer>
+      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">License Kit</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
+    </footer>
   </body>
 </html>
