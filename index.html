@@ -68,26 +68,11 @@
       .button.secondary:hover { border-color: rgba(183, 102, 79, .5); background: rgba(255,250,242,.55); }
 
       .burrow-scene { position: relative; min-height: 510px; isolation: isolate; }
-      .hill { position: absolute; inset: 27px 0 0; overflow: hidden; border-radius: 52% 52% 28px 28px / 35% 35% 28px 28px; background: linear-gradient(150deg, #718269 0, #3e5b4e 48%, #294239 100%); box-shadow: var(--shadow); }
-      .hill::before, .hill::after { content: ""; position: absolute; border: 1px solid rgba(255, 250, 242, .2); border-radius: 50%; }
-      .hill::before { width: 430px; height: 230px; left: -80px; top: 34px; transform: rotate(-12deg); }
-      .hill::after { width: 390px; height: 210px; right: -120px; bottom: 5px; transform: rotate(13deg); }
-      .window { position: absolute; z-index: 2; left: 50%; bottom: 0; width: 68%; height: 82%; transform: translateX(-50%); border: 14px solid #d5b999; border-bottom-width: 20px; border-radius: 48% 48% 18px 18px / 32% 32% 18px 18px; background: linear-gradient(155deg, rgba(255,255,255,.38), rgba(255,250,242,.9) 45%, #e9ddcb 100%); box-shadow: inset 0 0 0 1px rgba(41,41,35,.11), 0 22px 50px rgba(26, 40, 34, .3); }
-      .window::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(41,41,35,.16); }
-      .window::after { content: ""; position: absolute; left: 0; right: 0; top: 54%; height: 1px; background: rgba(41,41,35,.13); }
-      .shelf { position: absolute; z-index: 3; left: 13%; right: 13%; bottom: 13%; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; padding: 0 5%; }
-      .shelf::after { content: ""; position: absolute; left: 0; right: 0; bottom: -12px; height: 13px; border-radius: 5px; background: #9a664f; box-shadow: 0 8px 16px rgba(55,37,28,.22); }
-      .pot { width: 64px; height: 54px; border-radius: 9px 9px 22px 22px; background: var(--clay); }
-      .plant { position: relative; width: 86px; height: 125px; }
-      .plant i { position: absolute; left: 42px; bottom: 45px; width: 3px; height: 76px; background: var(--forest); transform-origin: bottom; }
-      .plant i:nth-child(2) { transform: rotate(-28deg); height: 60px; }
-      .plant i:nth-child(3) { transform: rotate(30deg); height: 66px; }
-      .plant i::before, .plant i::after { content: ""; position: absolute; width: 23px; height: 39px; border-radius: 80% 18% 75% 18%; background: #718269; }
-      .plant i::before { left: -21px; top: 12px; transform: rotate(-20deg); }
-      .plant i::after { left: 1px; top: 30px; transform: scaleX(-1) rotate(-18deg); }
-      .stone { width: 112px; height: 72px; border-radius: 50% 50% 16px 16px; background: linear-gradient(145deg, #d9c3a7, #b99b7a); box-shadow: inset 0 1px rgba(255,255,255,.4); }
-      .scene-note { position: absolute; z-index: 4; right: -18px; top: 0; width: 195px; padding: 17px 18px; border: 1px solid rgba(41,41,35,.12); border-radius: 16px; background: rgba(255,250,242,.94); box-shadow: 0 18px 45px rgba(58,45,31,.15); color: #5c5c52; font-size: .82rem; }
-      .scene-note strong { display: block; margin-bottom: 4px; color: var(--forest-deep); font-size: .93rem; }
+      .hero-art-panel { position: absolute; inset: 18px 0 0; overflow: hidden; display: grid; place-items: end center; border: 1px solid rgba(255,250,242,.18); border-radius: 48% 48% 28px 28px / 34% 34% 28px 28px; background: radial-gradient(circle at 50% 78%, #476557 0, #294239 48%, #172d27 100%); box-shadow: var(--shadow); }
+      .hero-art-panel::before, .hero-art-panel::after { content: ""; position: absolute; border: 1px solid rgba(255,250,242,.13); border-radius: 50%; }
+      .hero-art-panel::before { width: 520px; height: 300px; left: -180px; top: 35px; transform: rotate(-11deg); }
+      .hero-art-panel::after { width: 430px; height: 260px; right: -170px; bottom: 30px; transform: rotate(14deg); }
+      .hero-art-panel img { position: relative; z-index: 2; width: 91%; margin-bottom: -2%; filter: drop-shadow(0 24px 34px rgba(7,20,16,.38)); }
 
       .products { padding: 94px 0 112px; border-top: 1px solid var(--line); }
       .section-head { display: grid; grid-template-columns: 1fr minmax(280px, 480px); gap: 40px; align-items: end; margin-bottom: 38px; }
@@ -129,7 +114,6 @@
         .hero { padding-top: 70px; }
         .hero-grid { grid-template-columns: 1fr; }
         .burrow-scene { width: min(100%, 600px); min-height: 480px; }
-        .scene-note { right: 10px; }
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
         .product { min-height: 460px; }
@@ -143,8 +127,7 @@
         h1 { font-size: clamp(4rem, 22vw, 6rem); }
         .hero-copy { margin-top: 25px; }
         .burrow-scene { min-height: 390px; }
-        .window { width: 76%; }
-        .scene-note { top: -10px; width: 170px; }
+        .hero-art-panel img { width: 96%; }
         .products { padding: 72px 0 82px; }
         .product { min-height: 430px; padding: 27px; border-radius: 22px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
@@ -175,11 +158,8 @@
             <p class="hero-copy">We make apps and browser tools that are useful from the first minute and comfortable to keep around. Good Burrow is new. We are starting with a Firefox extension and the licensing kit we built alongside it.</p>
             <div class="hero-actions"><a class="button primary" href="#products">View the products</a><a class="button secondary" href="#about">About Good Burrow</a></div>
           </div>
-          <div class="burrow-scene" aria-label="A warm glass room built into a green hillside">
-            <div class="hill"></div>
-            <div class="window"></div>
-            <div class="shelf"><div class="plant" aria-hidden="true"><i></i><i></i><i></i><div class="pot"></div></div><div class="stone" aria-hidden="true"></div></div>
-            <div class="scene-note"><strong>Made independently</strong>Small products, direct support, and no outside investors.</div>
+          <div class="burrow-scene" aria-label="The Burrowmarks mole at the entrance to its burrow">
+            <div class="hero-art-panel"><img src="/Burrowmarks/mole-character.png" alt="Burrowmarks mole character"></div>
           </div>
         </div>
       </section>
