@@ -76,7 +76,7 @@
 
       .products { padding: 94px 0 112px; border-top: 1px solid var(--line); }
       .section-head { display: grid; grid-template-columns: 1fr minmax(280px, 480px); gap: 40px; align-items: end; margin-bottom: 38px; }
-      .section-head h2, .about h2 { margin: 0; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: .96; letter-spacing: -.06em; }
+      .section-head h2 { margin: 0; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: .96; letter-spacing: -.06em; }
       .section-head p { margin: 0; color: #606257; font-size: 1.02rem; }
       .product-list { display: grid; grid-template-columns: 1.16fr .84fr; gap: 20px; }
       .product { position: relative; overflow: hidden; min-height: 500px; padding: 34px; border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 14px 42px rgba(58,45,31,.08); transition: transform .2s ease, box-shadow .2s ease; }
@@ -99,12 +99,6 @@
       .kit-list b { color: #d9a84f; font-weight: 750; }
       .license::after { content: ""; position: absolute; right: -145px; bottom: -155px; width: 390px; height: 390px; border: 1px solid rgba(217,168,79,.2); border-radius: 50%; box-shadow: 0 0 0 42px rgba(217,168,79,.035), 0 0 0 84px rgba(217,168,79,.025); }
 
-      .about-wrap { padding: 0 0 108px; }
-      .about { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(50px, 9vw, 120px); padding: clamp(42px, 7vw, 76px); border-radius: 30px; background: var(--cream); box-shadow: 0 18px 55px rgba(58,45,31,.08); }
-      .about-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; color: #57594f; }
-      .about-copy p { margin: 0; }
-      .about-copy strong { display: block; margin-bottom: 8px; color: var(--forest-deep); font-size: .98rem; }
-
       footer { padding: 26px 0 42px; border-top: 1px solid var(--line); }
       .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 25px; color: #66675e; font-size: .88rem; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
@@ -117,7 +111,6 @@
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
         .product { min-height: 460px; }
-        .about { grid-template-columns: 1fr; gap: 36px; }
       }
       @media (max-width: 620px) {
         .shell { width: min(100% - 28px, 1160px); }
@@ -131,8 +124,6 @@
         .products { padding: 72px 0 82px; }
         .product { min-height: 430px; padding: 27px; border-radius: 22px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
-        .about { padding: 32px 26px; }
-        .about-copy { grid-template-columns: 1fr; gap: 25px; }
         .footer-row { align-items: flex-start; flex-direction: column; }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -145,7 +136,7 @@
     <header class="site-header">
       <div class="shell nav">
         <a class="brand" href="/" aria-label="Good Burrow home"><span class="brand-mark" aria-hidden="true"></span>Good Burrow</a>
-        <nav class="nav-links" aria-label="Main navigation"><a href="#products">Products</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+        <nav class="nav-links" aria-label="Main navigation"><a href="#products">Products</a></nav>
       </div>
     </header>
 
@@ -156,7 +147,7 @@
             <p class="label">Independent software studio</p>
             <h1>Good<br>Burrow</h1>
             <p class="hero-copy">We make apps and browser tools that are useful from the first minute and comfortable to keep around. Good Burrow is new. We are starting with a Firefox extension and the licensing kit we built alongside it.</p>
-            <div class="hero-actions"><a class="button primary" href="#products">View the products</a><a class="button secondary" href="#about">About Good Burrow</a></div>
+            <div class="hero-actions"><a class="button primary" href="#products">View the products</a></div>
           </div>
           <div class="burrow-scene" aria-label="The Burrowmarks mole at the entrance to its burrow">
             <div class="hero-art-panel"><img src="/Burrowmarks/mole-character.png" alt="Burrowmarks mole character"></div>
@@ -191,15 +182,6 @@
         </div>
       </section>
 
-      <section class="about-wrap" id="about">
-        <div class="shell about">
-          <h2>About Good Burrow</h2>
-          <div class="about-copy">
-            <p><strong>Who makes it</strong>Good Burrow is a small independent studio. Questions and support come directly to the people responsible for the products.</p>
-            <p><strong>What matters here</strong>Prices and limits should be easy to find. Accounts, subscriptions, and tracking should only exist when a product truly needs them. Your files should remain usable and exportable.</p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>
