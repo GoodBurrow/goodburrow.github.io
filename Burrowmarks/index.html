@@ -1,68 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Burrowmarks — Private bookmarks for Firefox</title>
-  <meta name="description" content="Keep personal bookmarks out of ordinary Firefox bookmarks and suggestions. Burrowmarks stores an encrypted vault locally, with recovery and export built in.">
-  <meta property="og:title" content="Burrowmarks — Private bookmarks for Firefox">
-  <meta property="og:description" content="A quiet, encrypted place for bookmarks you would rather keep to yourself.">
-  <meta property="og:image" content="https://goodburrow.github.io/Burrowmarks/og.png">
-  <meta property="og:url" content="https://goodburrow.github.io/Burrowmarks/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://goodburrow.github.io/Burrowmarks/">
-  <link rel="icon" href="favicon.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="responsive-fixes.css">
-  <link rel="stylesheet" href="navigation-fix.css">
-</head>
-<body>
-  <nav class="nav" aria-label="Main navigation">
-    <a class="wordmark" href="#top">Burrowmarks</a>
-    <div><a href="#how">How it works</a><a href="#trust">Why it lasts</a><a class="nav-button" href="#install">Get Burrowmarks</a></div>
-  </nav>
-
-  <main>
-    <section class="hero" id="top">
-      <div>
-        <p class="eyebrow">A private bookmark vault for Firefox</p>
-        <h1>A private place for bookmarks <em>you’d rather keep to yourself.</em></h1>
-        <p class="lead">Keep personal links in a dedicated encrypted vault with fast search, password protection, recovery, and standard bookmark import and export.</p>
-        <div class="actions"><a class="button primary" href="#install">See the Firefox edition</a><a class="button secondary" href="#how">How it works</a></div>
-        <p class="micro">Five links free forever · Unlimited for $14.99 once · Export anytime</p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Burrowmarks | Private bookmarks for Firefox</title>
+    <meta name="description" content="Keep selected bookmarks in a local encrypted Firefox vault with recovery, folders, search, import, and export.">
+    <meta property="og:title" content="Burrowmarks | Private bookmarks for Firefox">
+    <meta property="og:description" content="A private bookmark vault for Firefox with local encryption, recovery, import, and export.">
+    <meta property="og:image" content="https://goodburrow.github.io/Burrowmarks/og.png">
+    <meta property="og:url" content="https://goodburrow.github.io/Burrowmarks/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://goodburrow.github.io/Burrowmarks/">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell nav">
+        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>Good Burrow<small>Burrowmarks</small></span></a>
+        <nav class="nav-links" aria-label="Main navigation"><a href="#features">Features</a><a href="#install">Get Burrowmarks</a></nav>
       </div>
-      <div class="preview" role="img" aria-label="Preview of the Burrowmarks private vault">
-        <aside><span class="preview-brand">Burrowmarks</span><b>All private links</b><span>Tucked away</span><span>Backup &amp; export</span><small>LOCAL + ENCRYPTED</small><img class="mole" src="mole-character.png" alt=""></aside>
-        <div class="preview-main"><p class="eyebrow">A private bookmark vault for Firefox</p><h2>Private bookmarks</h2><div class="search">Search private bookmarks</div><div class="saved"><strong>Gift research</strong><span>••••••••••••</span></div><div class="saved"><strong>Personal reading</strong><span>••••••••••••</span></div><div class="saved"><strong>Saved for later</strong><span>••••••••••••</span></div></div>
-      </div>
-    </section>
+    </header>
 
-    <section class="promises" aria-label="Product promises"><span>No account</span><span>No cloud</span><span>No tracking</span><span>No subscription</span></section>
+    <main>
+      <section class="shell hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">A private bookmark vault for Firefox</p>
+          <h1>Private bookmarks for Firefox.</h1>
+          <p class="lead">Save selected links in a dedicated encrypted vault with password protection, folders, private notes, search, recovery, import, and export.</p>
+          <div class="actions"><a class="button primary" href="#install">Get the Firefox edition</a><a class="button secondary" href="#features">See the features</a></div>
+          <p class="price-line">Five links free · Unlimited for $14.99 once · No subscription</p>
+        </div>
 
-    <section class="light section" id="how">
-      <p class="eyebrow">Quiet by design</p><h2>The useful kind of hidden.</h2>
-      <div class="cards">
-        <article><b>01</b><h3>Save it privately</h3><p>Use the toolbar or right-click menu. The link stays outside Firefox bookmarks and bookmark suggestions.</p></article>
-        <article><b>02</b><h3>Unlock when needed</h3><p>Your master password opens an encrypted collection with search, private notes, and folders.</p></article>
-        <article><b>03</b><h3>Works with regular bookmarks</h3><p>Import standard bookmark HTML and export a file Firefox and other major browsers can read.</p></article>
-      </div>
-    </section>
+        <div class="preview" role="img" aria-label="Preview of the Burrowmarks private bookmark vault">
+          <aside>
+            <span class="preview-brand">Burrowmarks</span>
+            <b>All private links</b><span>Manage folders</span><span>Import &amp; export</span><span>Settings</span>
+            <small>LOCAL + ENCRYPTED</small>
+          </aside>
+          <div class="preview-main">
+            <p class="preview-label">A private bookmark vault for Firefox</p>
+            <h2>Private bookmarks</h2>
+            <div class="search">Search private bookmarks</div>
+            <div class="saved"><strong>Gift research</strong><span>••••••••••••</span></div>
+            <div class="saved"><strong>Personal reading</strong><span>••••••••••••</span></div>
+            <div class="saved"><strong>Saved for later</strong><span>••••••••••••</span></div>
+          </div>
+        </div>
+      </section>
 
-    <section class="split" id="trust">
-      <div><p class="eyebrow">Privacy, backup, and portability</p><h2>Your bookmarks stay private, recoverable, and easy to export.</h2></div>
-      <div><p><strong>Local encryption</strong><br>The vault and rolling safety copies stay encrypted inside your Firefox profile.</p><p><strong>Dependable recovery</strong><br>A recovery key, downloadable backup, and offline recovery kit protect the collection from forgotten passwords or profile loss.</p><p><strong>Browser compatibility</strong><br>Standard bookmark HTML makes it easy to bring selected bookmarks in and use exported links as regular browser bookmarks.</p></div>
-    </section>
+      <section class="facts" aria-label="Burrowmarks product details"><span>No account</span><span>Local encryption</span><span>Standard exports</span><span>One-time upgrade</span></section>
 
-    <section class="light install" id="install">
-      <div><p class="eyebrow">Start before you pay</p><h2>Save up to five private bookmarks free.</h2><p>Recovery and export are included in the free edition. Unlimited storage is a one-time $14.99 unlock, not a subscription.</p></div>
-      <div class="install-card"><img src="mole-character.png" alt="Burrowmarks mole"><strong>Firefox edition</strong><span>Five private links free</span><span>Local encrypted vault</span><span>Recovery and every export included</span><a class="button primary" href="https://buy.stripe.com/8x28wO0rjc9Hb695DF9k400">Unlock unlimited — $14.99 once</a><p class="status">Firefox Add-ons listing coming after review</p></div>
-    </section>
+      <section class="shell features" id="features">
+        <div class="section-heading"><p class="eyebrow">Features</p><h2>Save, find, and move your private bookmarks.</h2></div>
+        <div class="feature-grid">
+          <article><span>01</span><h3>Save from Firefox</h3><p>Add the current page from the toolbar or right-click menu. The link stays outside ordinary Firefox bookmarks.</p></article>
+          <article><span>02</span><h3>Organize the vault</h3><p>Search saved links, add private notes, and use folders with the unlimited upgrade.</p></article>
+          <article><span>03</span><h3>Import and export</h3><p>Bring in standard bookmark HTML and export files that Firefox and other major browsers can read.</p></article>
+        </div>
+      </section>
 
-    <section class="light fine-print"><h2>Private bookmarks without lock-in.</h2><p>The official Firefox Add-ons listing is coming soon.</p></section>
-  </main>
+      <section class="recovery">
+        <div class="shell recovery-grid">
+          <div><p class="eyebrow">Recovery and backup</p><h2>Encrypted locally, with recovery built in.</h2></div>
+          <div class="recovery-list">
+            <p><strong>Local vault</strong>Your saved links and rolling backups remain encrypted inside your Firefox profile.</p>
+            <p><strong>Recovery key</strong>Restore access if you forget the master password.</p>
+            <p><strong>Portable files</strong>Download encrypted backups or export ordinary bookmark HTML whenever you need it.</p>
+          </div>
+        </div>
+      </section>
 
-  <footer><a class="wordmark" href="#top">Burrowmarks</a><p>A private bookmark vault for Firefox.</p><div><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="https://github.com/GoodBurrow/goodburrow.github.io/issues">Support</a></div></footer>
-  <section class="legal" id="privacy"><h2>Privacy</h2><p>Burrowmarks does not collect, transmit, sell, or analyze saved links, passwords, recovery keys, or usage. Vault data remains in Firefox local storage on the user’s device.</p></section>
-  <section class="legal" id="terms"><h2>Terms</h2><p>A lifetime purchase unlocks unlimited bookmarks and folders in the current Burrowmarks product for one purchaser. Recovery and export remain available without payment. Purchases may be refunded within 14 days by contacting support. The software is provided as-is, and users remain responsible for saving their recovery key and downloadable backups.</p></section>
-</body>
+      <section class="shell install" id="install">
+        <div class="install-copy"><p class="eyebrow">Firefox edition</p><h2>Five private bookmarks are free.</h2><p>Recovery and export are included. Unlimited links and folders cost $14.99 once.</p></div>
+        <aside class="install-card">
+          <img src="mole-character.png" alt="Burrowmarks mole">
+          <strong>Burrowmarks for Firefox</strong>
+          <span>Five private links free</span><span>Local encrypted vault</span><span>Recovery and export included</span>
+          <a class="button primary" href="https://buy.stripe.com/8x28wO0rjc9Hb695DF9k400">Unlock unlimited for $14.99</a>
+          <p>Firefox Add-ons listing coming soon.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-row"><span>© Good Burrow</span><nav aria-label="Footer navigation"><a href="/">Good Burrow</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://github.com/GoodBurrow/goodburrow.github.io/issues">Support</a></nav></div>
+    </footer>
+  </body>
 </html>
