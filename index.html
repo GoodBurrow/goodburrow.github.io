@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Good Burrow | Apps and browser tools</title>
-    <meta name="description" content="Good Burrow makes independent apps and browser tools, including the recoverable private bookmark vault Burrowmarks and the Extension License Kit.">
+    <meta name="description" content="Good Burrow makes independent browser tools and free web apps that are useful from the first minute.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://goodburrow.github.io/">
     <style>
@@ -99,6 +99,15 @@
       .kit-list b { color: #d9a84f; font-weight: 750; }
       .license::after { content: ""; position: absolute; right: -145px; bottom: -155px; width: 390px; height: 390px; border: 1px solid rgba(217,168,79,.2); border-radius: 50%; box-shadow: 0 0 0 42px rgba(217,168,79,.035), 0 0 0 84px rgba(217,168,79,.025); }
 
+      .web-apps { padding: 0 0 112px; }
+      .web-app-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+      .web-app { display: grid; grid-template-columns: 94px minmax(0, 1fr); align-items: center; gap: 24px; min-height: 236px; padding: 28px; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,250,242,.58); box-shadow: 0 14px 42px rgba(58,45,31,.06); transition: transform .2s ease, box-shadow .2s ease; }
+      .web-app:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+      .web-app img { width: 94px; height: 94px; object-fit: contain; border-radius: 24px; box-shadow: 0 12px 24px rgba(58,45,31,.14); }
+      .web-app h3 { margin: 0; font-size: clamp(1.85rem, 3vw, 2.6rem); line-height: .98; letter-spacing: -.055em; }
+      .web-app p { margin: 13px 0 0; color: #606257; }
+      .web-app .button { margin-top: 19px; min-height: 42px; padding-inline: 15px; background: var(--cream); }
+
       footer { padding: 26px 0 42px; border-top: 1px solid var(--line); }
       .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 25px; color: #66675e; font-size: .88rem; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
@@ -110,6 +119,7 @@
         .burrow-scene { width: min(100%, 600px); min-height: 480px; }
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
+        .web-app-list { grid-template-columns: 1fr; }
         .product { min-height: 460px; }
       }
       @media (max-width: 620px) {
@@ -123,6 +133,8 @@
         .hero-art-panel img { width: 96%; }
         .products { padding: 72px 0 82px; }
         .product { min-height: 430px; padding: 27px; border-radius: 22px; }
+        .web-app { grid-template-columns: 74px minmax(0, 1fr); gap: 18px; min-height: 0; padding: 23px; border-radius: 22px; }
+        .web-app img { width: 74px; height: 74px; border-radius: 19px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
         .footer-row { align-items: flex-start; flex-direction: column; }
       }
@@ -136,7 +148,7 @@
     <header class="site-header">
       <div class="shell nav">
         <a class="brand" href="/" aria-label="Good Burrow home"><span class="brand-mark" aria-hidden="true"></span>Good Burrow</a>
-        <nav class="nav-links" aria-label="Main navigation"><a href="#products">Products</a></nav>
+        <nav class="nav-links" aria-label="Main navigation"><a href="#products">Products</a><a href="#web-apps">Free apps</a></nav>
       </div>
     </header>
 
@@ -146,7 +158,7 @@
           <div>
             <p class="label">Independent software studio</p>
             <h1>Good<br>Burrow</h1>
-            <p class="hero-copy">We make apps and browser tools that are useful from the first minute and comfortable to keep around. Good Burrow is new. We are starting with a recoverable private bookmark vault and the licensing kit we built alongside it.</p>
+            <p class="hero-copy">We make browser tools and web apps that are useful from the first minute and comfortable to keep around. Our products stay focused, local where practical, and easy to understand.</p>
             <div class="hero-actions"><a class="button primary" href="#products">View the products</a></div>
           </div>
           <div class="burrow-scene" aria-label="The Burrowmarks mole at the entrance to its burrow">
@@ -182,10 +194,36 @@
         </div>
       </section>
 
+      <section class="web-apps" id="web-apps">
+        <div class="shell">
+          <div class="section-head"><h2>Free web apps</h2><p>Useful tools you can open in a browser. No account, subscription, or cloud workspace required.</p></div>
+          <div class="web-app-list">
+            <a class="web-app" href="/Siggy/">
+              <img src="/Siggy/assets/icons/siggy-red-panda.png" alt="Siggy red panda icon">
+              <div>
+                <p class="product-tag">Email signatures</p>
+                <h3>Siggy</h3>
+                <p>Build a professional HTML email signature for Gmail, Outlook, Apple Mail, and other email clients.</p>
+                <span class="button">Open Siggy</span>
+              </div>
+            </a>
+            <a class="web-app" href="/MailPaw/">
+              <img src="/MailPaw/mailpaw-icon.png" alt="MailPaw cat icon">
+              <div>
+                <p class="product-tag">Email templates</p>
+                <h3>MailPaw</h3>
+                <p>Build reusable email layouts for newsletters, announcements, outreach, and everyday messages.</p>
+                <span class="button">Open MailPaw</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer>
-      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">License Kit</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
+      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">License Kit</a><a href="/Siggy/">Siggy</a><a href="/MailPaw/">MailPaw</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
     </footer>
   </body>
 </html>
