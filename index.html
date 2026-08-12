@@ -7,6 +7,7 @@
     <meta name="description" content="Good Burrow makes independent browser tools and free web apps that are useful from the first minute.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://goodburrow.github.io/">
+    <link rel="icon" href="/favicon.png">
     <style>
       :root {
         color-scheme: light;
@@ -97,6 +98,12 @@
       .kit-list span { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 14px; border: 1px solid rgba(255,250,242,.13); border-radius: 10px; background: rgba(255,255,255,.035); color: #dce3de; font: 650 .78rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
       .kit-list b { color: #d9a84f; font-weight: 750; }
       .license::after { content: ""; position: absolute; right: -145px; bottom: -155px; width: 390px; height: 390px; border: 1px solid rgba(217,168,79,.2); border-radius: 50%; box-shadow: 0 0 0 42px rgba(217,168,79,.035), 0 0 0 84px rgba(217,168,79,.025); }
+      .archive { grid-column: 1 / -1; min-height: 530px; background: #e1e9e2; color: var(--ink); }
+      .archive .product-tag { color: var(--forest); }
+      .archive .product-copy { max-width: 460px; }
+      .archive .product-copy > p:not(.product-tag) { color: #4f5e55; }
+      .archive > img { position: absolute; right: -4%; bottom: -3%; width: min(760px, 60%); border: 1px solid rgba(18,24,21,.12); border-radius: 20px; box-shadow: 0 24px 55px rgba(25,38,31,.18); transform: rotate(1deg); }
+      .archive .button { border-color: var(--forest); background: var(--forest); color: #fff; }
 
       .web-apps { padding: 112px 0 124px; }
       .web-app-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -118,6 +125,8 @@
         .burrow-scene { width: min(100%, 600px); min-height: 480px; }
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
+        .archive { grid-column: auto; min-height: 680px; }
+        .archive > img { right: -8%; width: 94%; }
         .web-app-list { grid-template-columns: 1fr; }
         .product { min-height: 460px; }
       }
@@ -132,6 +141,8 @@
         .hero-art-panel img { width: 96%; }
         .products { padding: 72px 0 82px; }
         .product { min-height: 430px; padding: 27px; border-radius: 18px; }
+        .archive { min-height: 610px; }
+        .archive > img { right: -18%; width: 118%; }
         .web-app { grid-template-columns: 74px minmax(0, 1fr); gap: 18px; min-height: 0; padding: 23px; border-radius: 18px; }
         .web-app img { width: 74px; height: 74px; border-radius: 19px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
@@ -168,8 +179,18 @@
 
       <section class="products" id="products">
         <div class="shell">
-          <div class="section-head"><h2>Products</h2><p>Burrowmarks is a Firefox extension. The Extension License Kit is coming soon.</p></div>
+          <div class="section-head"><h2>Products</h2><p>Focused software with clear prices, requirements, and limits.</p></div>
           <div class="product-list">
+            <a class="product archive" href="/archive-reader/">
+              <div class="product-copy">
+                <p class="product-tag">Private Mac utility</p>
+                <h3>Archive Reader</h3>
+                <p>Turn an official Instagram or Facebook JSON export into searchable conversations and browsable media. Your archive stays on your Mac.</p>
+                <span class="button">Review Archive Reader</span>
+              </div>
+              <img src="/archive-reader/assets/archive-reader-messages.png" alt="Archive Reader showing a fictional conversation">
+            </a>
+
             <a class="product burrowmarks" href="/Burrowmarks/">
               <div class="product-copy">
                 <p class="product-tag">Firefox extension</p>
@@ -222,7 +243,7 @@
     </main>
 
     <footer>
-      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">License Kit</a><a href="/Siggy/">Siggy</a><a href="/MailPaw/">MailPaw</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
+      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/archive-reader/">Archive Reader</a><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">License Kit</a><a href="/Siggy/">Siggy</a><a href="/MailPaw/">MailPaw</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
     </footer>
   </body>
 </html>
