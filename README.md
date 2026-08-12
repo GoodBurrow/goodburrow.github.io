@@ -1,7 +1,7 @@
 # Good Burrow website
 
-This public repository contains the Good Burrow managed-website sales site,
-its fictional demonstrations, and the Burrowmarks marketing page.
+This public repository contains Good Burrow's product homepage, the Burrowmarks
+marketing and license pages, and the Extension License Kit information page.
 
-Customer editing, private previews, payments, and operations remain in
-separate private systems and are not exposed in this repository.
+The discontinued managed-website sales pages and demonstrations are not part of
+the public site.
