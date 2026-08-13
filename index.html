@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Good Burrow | Useful apps and browser tools</title>
-    <meta name="description" content="Good Burrow is an independent software studio making focused, privacy-friendly apps and browser tools, including Siggy, MailPaw, Burrowmarks, and Social Keepsake.">
+    <meta name="description" content="Good Burrow is an independent software studio making focused, privacy-friendly apps and browser tools, including Social Archive, Chat Library, Burrowmarks, Siggy, and MailPaw.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://goodburrow.github.io/">
     <link rel="icon" href="/favicon.png">
@@ -105,6 +105,12 @@
       .archive .product-copy > p:not(.product-tag) { color: #4f5e55; }
       .archive > img { position: absolute; right: -4%; bottom: -3%; width: min(760px, 60%); border: 1px solid rgba(18,24,21,.12); border-radius: 20px; box-shadow: 0 24px 55px rgba(25,38,31,.18); transform: rotate(1deg); }
       .archive .button { border-color: var(--forest); background: var(--forest); color: #fff; }
+      .chat { grid-column: 1 / -1; min-height: 530px; background: #f0dfcc; color: var(--ink); }
+      .chat .product-tag { color: var(--clay); }
+      .chat .product-copy { max-width: 455px; }
+      .chat .product-copy > p:not(.product-tag) { color: #5e5148; }
+      .chat > img { position: absolute; right: 4%; bottom: -3%; width: min(760px, 59%); border: 1px solid rgba(18,24,21,.12); border-radius: 20px; box-shadow: 0 24px 55px rgba(72,49,37,.17); transform: rotate(-1deg); }
+      .chat .button { border-color: var(--forest); background: var(--forest); color: #fff; }
 
       .web-apps { padding: 112px 0 124px; }
       .web-app-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -126,8 +132,8 @@
         .burrow-scene { width: min(100%, 600px); min-height: 480px; }
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
-        .archive { grid-column: auto; min-height: 680px; }
-        .archive > img { right: -8%; width: 94%; }
+        .archive, .chat { grid-column: auto; min-height: 680px; }
+        .archive > img, .chat > img { right: -8%; width: 94%; }
         .web-app-list { grid-template-columns: 1fr; }
         .product { min-height: 460px; }
       }
@@ -150,8 +156,8 @@
         .product { min-height: 430px; padding: 27px; border-radius: 18px; }
         .product h3 { font-size: clamp(2.2rem, 11vw, 3rem); }
         .product-copy > p:not(.product-tag) { font-size: 1rem; line-height: 1.55; }
-        .archive { min-height: 610px; }
-        .archive > img { right: -18%; width: 118%; }
+        .archive, .chat { min-height: 610px; }
+        .archive > img, .chat > img { right: -18%; width: 118%; }
         .web-app { grid-template-columns: 74px minmax(0, 1fr); gap: 18px; min-height: 0; padding: 23px; border-radius: 18px; }
         .web-app img { width: 74px; height: 74px; border-radius: 19px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
@@ -190,14 +196,24 @@
         <div class="shell">
           <div class="section-head"><h2>Products</h2><p>Mac apps and browser extensions from Good Burrow.</p></div>
           <div class="product-list">
-            <a class="product archive" href="/social-keepsake/">
+            <a class="product archive" href="/social-archive/">
               <div class="product-copy">
                 <p class="product-tag">Private Mac utility</p>
-                <h3>Social Keepsake</h3>
+                <h3>Social Archive</h3>
                 <p>Keep an offline copy of your Instagram or Facebook history. Read conversations, search messages, and browse included photos, videos, and audio on your Mac.</p>
-                <span class="button">View Social Keepsake</span>
+                <span class="button">View Social Archive</span>
               </div>
-              <img src="/social-keepsake/assets/social-keepsake-messages.png" alt="Social Keepsake showing a fictional conversation">
+              <img src="/social-archive/assets/social-archive-messages.png" alt="Social Archive showing a fictional conversation">
+            </a>
+
+            <a class="product chat" href="/chat-library/">
+              <div class="product-copy">
+                <p class="product-tag">Private Mac app</p>
+                <h3>Chat Library</h3>
+                <p>Open and search the conversations in your ChatGPT data export. Browse the downloaded history and included files without uploading them anywhere.</p>
+                <span class="button">View Chat Library</span>
+              </div>
+              <img src="/chat-library/assets/chat-library-messages.png" alt="Chat Library showing fictional exported ChatGPT conversations">
             </a>
 
             <a class="product burrowmarks" href="/Burrowmarks/">
@@ -252,7 +268,7 @@
     </main>
 
     <footer>
-      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/social-keepsake/">Social Keepsake</a><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">License Kit</a><a href="/Siggy/">Siggy</a><a href="/MailPaw/">MailPaw</a><a href="https://github.com/GoodBurrow">GitHub</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
+      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/social-archive/">Social Archive</a><a href="/chat-library/">Chat Library</a><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">License Kit</a><a href="/Siggy/">Siggy</a><a href="/MailPaw/">MailPaw</a><a href="https://github.com/GoodBurrow">GitHub</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
     </footer>
   </body>
 </html>
