@@ -156,8 +156,19 @@
         .product { min-height: 430px; padding: 27px; border-radius: 18px; }
         .product h3 { font-size: clamp(2.2rem, 11vw, 3rem); }
         .product-copy > p:not(.product-tag) { font-size: 1rem; line-height: 1.55; }
-        .archive, .chat { min-height: 610px; }
-        .archive > img, .chat > img { right: -18%; width: 118%; }
+        .archive, .chat { min-height: 0; padding-bottom: 0; }
+        .archive > img, .chat > img {
+          position: relative;
+          right: auto;
+          bottom: auto;
+          width: calc(100% + 54px);
+          max-width: none;
+          margin: 34px -27px 0;
+          border-width: 1px 0 0;
+          border-radius: 0 0 18px 18px;
+          box-shadow: none;
+          transform: none;
+        }
         .web-app { grid-template-columns: 74px minmax(0, 1fr); gap: 18px; min-height: 0; padding: 23px; border-radius: 18px; }
         .web-app img { width: 74px; height: 74px; border-radius: 19px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
