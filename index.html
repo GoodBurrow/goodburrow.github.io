@@ -167,6 +167,22 @@
         html { scroll-behavior: auto; }
         *, *::before, *::after { transition: none !important; }
       }
+
+      .archive .product-copy::before,
+      .chat .product-copy::before {
+        content: "";
+        display: block;
+        width: 76px;
+        height: 76px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(18,24,21,.1);
+        border-radius: 19px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0 12px 28px rgba(25,38,31,.16);
+      }
+      .archive .product-copy::before { background-image: url('/social-archive/assets/social-archive-icon.png'); }
+      .chat .product-copy::before { background-image: url('/chat-library/assets/chat-library-icon.png'); }
     </style>
   </head>
   <body>
