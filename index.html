@@ -132,8 +132,19 @@
         .burrow-scene { width: min(100%, 600px); min-height: 480px; }
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
-        .archive, .chat { grid-column: auto; min-height: 680px; }
-        .archive > img, .chat > img { right: -8%; width: 94%; }
+        .archive, .chat { grid-column: auto; min-height: 0; padding-bottom: 0; }
+        .archive > img, .chat > img {
+          position: relative;
+          right: auto;
+          bottom: auto;
+          width: calc(100% + 80px);
+          max-width: none;
+          margin: 38px -40px 0;
+          border-width: 1px 0 0;
+          border-radius: 0 0 22px 22px;
+          box-shadow: none;
+          transform: none;
+        }
         .web-app-list { grid-template-columns: 1fr; }
         .product { min-height: 460px; }
       }
