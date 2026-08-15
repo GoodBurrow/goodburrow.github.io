@@ -69,11 +69,17 @@
       .button.secondary:hover { border-color: rgba(183, 102, 79, .5); background: rgba(255,250,242,.55); }
 
       .burrow-scene { position: relative; min-height: 510px; isolation: isolate; }
-      .hero-art-panel { position: absolute; inset: 8px 0 0; overflow: hidden; display: grid; place-items: end center; border: 1px solid rgba(255,250,242,.18); border-radius: 24px; background: radial-gradient(circle at 50% 78%, #547566 0, #24483b 49%, #142e26 100%); box-shadow: var(--shadow); }
-      .hero-art-panel::before, .hero-art-panel::after { content: ""; position: absolute; border: 1px solid rgba(255,250,242,.13); border-radius: 50%; }
-      .hero-art-panel::before { width: 520px; height: 300px; left: -180px; top: 35px; transform: rotate(-11deg); }
-      .hero-art-panel::after { width: 430px; height: 260px; right: -170px; bottom: 30px; transform: rotate(14deg); }
-      .hero-art-panel img { position: relative; z-index: 2; width: 91%; margin-bottom: -2%; filter: drop-shadow(0 24px 34px rgba(7,20,16,.38)); -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 78%, rgba(0,0,0,.7) 81%, rgba(0,0,0,.15) 84%, transparent 87%); mask-image: linear-gradient(to bottom, #000 0%, #000 78%, rgba(0,0,0,.7) 81%, rgba(0,0,0,.15) 84%, transparent 87%); }
+      .app-library { position: absolute; inset: 8px 0 0; overflow: hidden; display: flex; padding: 26px; border: 1px solid rgba(255,250,242,.18); border-radius: 24px; background: linear-gradient(145deg, #24483b, #142e26 74%); box-shadow: var(--shadow); flex-direction: column; }
+      .library-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,250,242,.13); color: var(--cream); }
+      .library-title { display: inline-flex; align-items: center; gap: 10px; font-size: .84rem; font-weight: 800; letter-spacing: -.01em; }
+      .library-title::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px rgba(217,168,79,.12); }
+      .library-count { color: #9fb0a6; font: 650 .67rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; }
+      .library-grid { display: grid; min-height: 0; flex: 1; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-content: center; }
+      .library-app { display: grid; min-width: 0; padding: 18px 8px 14px; border: 1px solid rgba(255,250,242,.12); border-radius: 17px; background: rgba(255,250,242,.055); color: var(--cream); place-items: center; transition: transform .18s ease, background .18s ease; }
+      .library-app:hover { transform: translateY(-3px); background: rgba(255,250,242,.09); }
+      .library-app img { width: 72px; height: 72px; border-radius: 18px; object-fit: cover; box-shadow: 0 12px 22px rgba(4,14,11,.25); }
+      .library-app strong { overflow: hidden; width: 100%; margin-top: 10px; font-size: .72rem; line-height: 1.2; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+      .library-app small { margin-top: 4px; color: #9fb0a6; font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 
       .products { padding: 112px 0 124px; border-top: 1px solid var(--line); background: var(--paper-deep); }
       .section-head { display: grid; grid-template-columns: 1fr minmax(280px, 440px); gap: 44px; align-items: end; margin-bottom: 44px; }
@@ -162,8 +168,14 @@
         .hero-copy { margin-top: 22px; font-size: 1rem; line-height: 1.64; }
         .hero-actions { margin-top: 28px; }
         .burrow-scene { min-height: 340px; }
-        .hero-art-panel { inset: 0; border-radius: 22px; }
-        .hero-art-panel img { width: 92%; }
+        .app-library { inset: 0; padding: 16px; border-radius: 22px; }
+        .library-bar { padding-bottom: 13px; }
+        .library-count { display: none; }
+        .library-grid { gap: 8px; }
+        .library-app { padding: 10px 5px 8px; border-radius: 13px; }
+        .library-app img { width: 50px; height: 50px; border-radius: 13px; }
+        .library-app strong { margin-top: 7px; font-size: .62rem; }
+        .library-app small { display: none; }
         .products { padding: 72px 0 82px; }
         .section-head { margin-bottom: 30px; }
         .section-head h2 { font-size: 3rem; }
@@ -231,8 +243,18 @@
             <p class="hero-copy">Good Burrow is an independent software studio creating Mac apps, browser extensions, and free web tools. We make software for specific everyday needs, with straightforward pricing and clear information about how each product handles your data.</p>
             <div class="hero-actions"><a class="button primary" href="#products">View the products</a></div>
           </div>
-          <div class="burrow-scene" aria-label="The Burrowmarks mole at the entrance to its burrow">
-            <div class="hero-art-panel"><img src="/Burrowmarks/mole-character.png" alt="Burrowmarks mole character"></div>
+          <div class="burrow-scene" aria-label="Good Burrow app library">
+            <div class="app-library">
+              <div class="library-bar"><span class="library-title">Good Burrow Library</span><span class="library-count">6 products</span></div>
+              <div class="library-grid">
+                <a class="library-app" href="/social-archive/"><img src="/assets/product-icons/social-archive.png" alt=""><strong>Social Archive</strong><small>Mac app</small></a>
+                <a class="library-app" href="/chat-library/"><img src="/assets/product-icons/chat-library.png" alt=""><strong>Chat Library</strong><small>Mac app</small></a>
+                <a class="library-app" href="/Burrowmarks/"><img src="/assets/product-icons/burrowmarks.png" alt=""><strong>Burrowmarks</strong><small>Extension</small></a>
+                <a class="library-app" href="/extension-license-kit/"><img src="/assets/product-icons/license-kit.png" alt=""><strong>License Kit</strong><small>Developer kit</small></a>
+                <a class="library-app" href="/Siggy/"><img src="/assets/product-icons/siggy.png" alt=""><strong>Siggy</strong><small>Web app</small></a>
+                <a class="library-app" href="/MailPaw/"><img src="/assets/product-icons/mailpaw.png" alt=""><strong>MailPaw</strong><small>Web app</small></a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
