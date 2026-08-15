@@ -93,12 +93,11 @@
       .burrowmarks .button { border-color: rgba(46,41,36,.28); background: rgba(255,250,242,.68); }
       .license { background: var(--forest-deep); color: var(--cream); }
       .license .product-tag { color: #cbb888; }
-      .license .product-copy > p:not(.product-tag) { color: #c7d1ca; }
-      .license .button { margin-right: 96px; border-color: rgba(255,250,242,.22); background: rgba(255,250,242,.08); }
-      .kit-list { position: relative; z-index: 2; display: grid; gap: 9px; width: min(100%, 370px); margin: 38px 0 0; }
-      .kit-list span { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 14px; border: 1px solid rgba(255,250,242,.13); border-radius: 10px; background: rgba(255,255,255,.035); color: #dce3de; font: 650 .78rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
-      .kit-list b { color: #d9a84f; font-weight: 750; }
-      .license-mascot { position: absolute; right: 24px; bottom: 24px; z-index: 3; display: block; width: 76px; height: 76px; margin: 0; border: 1px solid rgba(255,250,242,.16); border-radius: 22px; background: rgba(255,250,242,.06); object-fit: cover; object-position: 50% 7%; filter: drop-shadow(0 12px 18px rgba(5,15,12,.3)); }
+      .license .product-copy { max-width: none; margin-left: 43%; }
+      .license h3 { font-size: clamp(1.9rem, 2.6vw, 2.7rem); line-height: 1.02; }
+      .license .product-copy > p:not(.product-tag) { margin-top: 16px; color: #c7d1ca; font-size: .93rem; line-height: 1.5; }
+      .license .button { min-height: 44px; margin-top: 22px; padding-inline: 15px; border-color: rgba(255,250,242,.22); background: rgba(255,250,242,.08); font-size: .88rem; }
+      .license-mascot { position: absolute; left: 3px; bottom: -6px; z-index: 3; display: block; width: 44%; height: 92%; margin: 0; object-fit: contain; object-position: left bottom; filter: drop-shadow(0 18px 24px rgba(5,15,12,.32)); }
       .license::after { content: ""; position: absolute; right: -145px; bottom: -155px; width: 390px; height: 390px; border: 1px solid rgba(217,168,79,.2); border-radius: 50%; box-shadow: 0 0 0 42px rgba(217,168,79,.035), 0 0 0 84px rgba(217,168,79,.025); }
       .archive { grid-column: 1 / -1; min-height: 530px; background: #e1e9e2; color: var(--ink); }
       .archive .product-tag { color: var(--forest); }
@@ -188,8 +187,11 @@
         .web-app { grid-template-columns: 74px minmax(0, 1fr); gap: 18px; min-height: 0; padding: 23px; border-radius: 18px; }
         .web-app img { width: 74px; height: 74px; border-radius: 19px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
-        .license .button { margin-right: 88px; }
-        .license-mascot { right: 20px; bottom: 20px; width: 70px; height: 70px; border-radius: 20px; }
+        .license .product-copy { margin-left: 40%; }
+        .license h3 { font-size: clamp(1.72rem, 8vw, 2rem); }
+        .license .product-copy > p:not(.product-tag) { margin-top: 14px; font-size: .86rem; line-height: 1.46; }
+        .license .button { min-height: 42px; margin-top: 18px; padding-inline: 13px; font-size: .8rem; }
+        .license-mascot { left: -4px; bottom: -2px; width: 42%; height: 87%; }
         .footer-row { align-items: flex-start; flex-direction: column; }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -275,8 +277,7 @@
               <div class="product-copy">
                 <p class="product-tag">For extension developers</p>
                 <h3>Browser Extension License Kit</h3>
-                <p>Add one-time purchases and offline license checks to a browser extension. The kit includes working code, a sample extension, tests, and setup notes.</p>
-                <div class="kit-list" aria-label="License Kit contents"><span>Payment fulfillment <b>Stripe</b></span><span>License checks <b>Offline</b></span><span>Sample extension <b>Firefox + Chromium</b></span></div>
+                <p>Add one-time purchases and offline license checks to a browser extension. Includes working code, a sample extension, tests, and setup notes.</p>
                 <span class="button">Review the License Kit</span>
               </div>
               <img class="license-mascot" src="/extension-license-kit/assets/license-kit-mechanic-bunny.png" alt="Good Burrow rabbit mechanic beside a browser extension licensing machine">
