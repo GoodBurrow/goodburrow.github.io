@@ -98,6 +98,7 @@
       .kit-list { position: relative; z-index: 2; display: grid; gap: 9px; width: min(100%, 370px); margin: 38px 0 0; }
       .kit-list span { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 14px; border: 1px solid rgba(255,250,242,.13); border-radius: 10px; background: rgba(255,255,255,.035); color: #dce3de; font: 650 .78rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
       .kit-list b { color: #d9a84f; font-weight: 750; }
+      .license-mascot { position: relative; z-index: 2; display: block; width: min(100%, 330px); height: 285px; margin: 28px auto -62px; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 22px 28px rgba(5,15,12,.32)); }
       .license::after { content: ""; position: absolute; right: -145px; bottom: -155px; width: 390px; height: 390px; border: 1px solid rgba(217,168,79,.2); border-radius: 50%; box-shadow: 0 0 0 42px rgba(217,168,79,.035), 0 0 0 84px rgba(217,168,79,.025); }
       .archive { grid-column: 1 / -1; min-height: 530px; background: #e1e9e2; color: var(--ink); }
       .archive .product-tag { color: var(--forest); }
@@ -187,6 +188,7 @@
         .web-app { grid-template-columns: 74px minmax(0, 1fr); gap: 18px; min-height: 0; padding: 23px; border-radius: 18px; }
         .web-app img { width: 74px; height: 74px; border-radius: 19px; }
         .burrowmarks img { width: 245px; max-width: 62%; }
+        .license-mascot { width: min(100%, 300px); height: 270px; margin-top: 24px; }
         .footer-row { align-items: flex-start; flex-direction: column; }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -276,6 +278,7 @@
                 <div class="kit-list" aria-label="License Kit contents"><span>Payment fulfillment <b>Stripe</b></span><span>License checks <b>Offline</b></span><span>Sample extension <b>Firefox + Chromium</b></span></div>
                 <span class="button">Review the License Kit</span>
               </div>
+              <img class="license-mascot" src="/extension-license-kit/assets/license-kit-mechanic-bunny.png" alt="Good Burrow rabbit mechanic beside a browser extension licensing machine">
             </a>
           </div>
         </div>
