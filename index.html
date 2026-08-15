@@ -56,12 +56,12 @@
       .nav-links a:hover { color: var(--clay); }
 
       .hero { padding: 112px 0 132px; }
-      .hero-grid { display: grid; grid-template-columns: minmax(0, 1.13fr) minmax(390px, .87fr); gap: clamp(48px, 6vw, 98px); align-items: center; }
+      .hero-grid { display: grid; grid-template-columns: minmax(300px, .72fr) minmax(560px, 1.28fr); gap: clamp(44px, 5vw, 72px); align-items: center; }
       .label { margin: 0 0 22px; color: var(--clay); font-size: .68rem; font-weight: 850; letter-spacing: .18em; text-transform: uppercase; }
       h1, h2, h3 { text-wrap: balance; }
       h1, h2, h3 { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      h1 { margin: 0; font-size: clamp(4rem, 7.7vw, 7.1rem); font-weight: 800; line-height: .96; letter-spacing: -.045em; word-spacing: .04em; }
-      .hero-copy { max-width: 590px; margin: 32px 0 0; color: #5c655e; font-size: clamp(1.05rem, 1.55vw, 1.22rem); line-height: 1.72; }
+      h1 { margin: 0; font-size: clamp(3.8rem, 5vw, 5.4rem); font-weight: 800; line-height: .96; letter-spacing: -.045em; word-spacing: .04em; }
+      .hero-copy { max-width: 430px; margin: 26px 0 0; color: #5c655e; font-size: clamp(1.08rem, 1.65vw, 1.3rem); line-height: 1.55; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
       .button { display: inline-flex; align-items: center; justify-content: center; min-height: 47px; padding: 0 19px; border: 1px solid var(--line); border-radius: 999px; font-size: .91rem; font-weight: 780; transition: transform .18s ease, background .18s ease, border-color .18s ease; }
       .button:hover { transform: translateY(-2px); }
@@ -69,17 +69,17 @@
       .button.secondary:hover { border-color: rgba(183, 102, 79, .5); background: rgba(255,250,242,.55); }
 
       .burrow-scene { position: relative; min-height: 510px; isolation: isolate; }
-      .app-library { position: absolute; inset: 8px 0 0; overflow: hidden; display: flex; padding: 26px; border: 1px solid rgba(255,250,242,.18); border-radius: 24px; background: linear-gradient(145deg, #24483b, #142e26 74%); box-shadow: var(--shadow); flex-direction: column; }
-      .library-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,250,242,.13); color: var(--cream); }
+      .app-library { position: absolute; inset: 8px 0 0; overflow: hidden; display: flex; padding: 28px; border: 1px solid rgba(70,58,45,.16); border-radius: 24px; background: linear-gradient(145deg, #f8f1e7, #e7d8c7 76%); box-shadow: var(--shadow); flex-direction: column; }
+      .library-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(70,58,45,.14); color: var(--ink); }
       .library-title { display: inline-flex; align-items: center; gap: 10px; font-size: .84rem; font-weight: 800; letter-spacing: -.01em; }
       .library-title::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px rgba(217,168,79,.12); }
-      .library-count { color: #9fb0a6; font: 650 .67rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; }
+      .library-count { color: #8b7565; font: 650 .67rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; }
       .library-grid { display: grid; min-height: 0; flex: 1; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-content: center; }
-      .library-app { display: grid; min-width: 0; padding: 18px 8px 14px; border: 1px solid rgba(255,250,242,.12); border-radius: 17px; background: rgba(255,250,242,.055); color: var(--cream); place-items: center; transition: transform .18s ease, background .18s ease; }
-      .library-app:hover { transform: translateY(-3px); background: rgba(255,250,242,.09); }
-      .library-app img { width: 72px; height: 72px; border-radius: 18px; object-fit: cover; box-shadow: 0 12px 22px rgba(4,14,11,.25); }
+      .library-app { display: grid; min-width: 0; padding: 19px 8px 15px; border: 1px solid rgba(70,58,45,.13); border-radius: 17px; background: rgba(255,250,242,.68); color: var(--ink); place-items: center; transition: transform .18s ease, background .18s ease, box-shadow .18s ease; }
+      .library-app:hover { transform: translateY(-3px); background: var(--cream); box-shadow: 0 12px 26px rgba(77,56,37,.1); }
+      .library-app img { width: 82px; height: 82px; border-radius: 19px; object-fit: cover; box-shadow: 0 12px 22px rgba(77,56,37,.16); }
       .library-app strong { overflow: hidden; width: 100%; margin-top: 10px; font-size: .72rem; line-height: 1.2; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
-      .library-app small { margin-top: 4px; color: #9fb0a6; font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+      .library-app small { margin-top: 4px; color: #8b7565; font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 
       .products { padding: 112px 0 124px; border-top: 1px solid var(--line); background: var(--paper-deep); }
       .section-head { display: grid; grid-template-columns: 1fr minmax(280px, 440px); gap: 44px; align-items: end; margin-bottom: 44px; }
@@ -240,8 +240,7 @@
           <div>
             <p class="label">Independent software studio</p>
             <h1>Good Burrow</h1>
-            <p class="hero-copy">Good Burrow is an independent software studio creating Mac apps, browser extensions, and free web tools. We make software for specific everyday needs, with straightforward pricing and clear information about how each product handles your data.</p>
-            <div class="hero-actions"><a class="button primary" href="#products">View the products</a></div>
+            <p class="hero-copy">Thoughtful apps for Mac, browsers, and the web.</p>
           </div>
           <div class="burrow-scene" aria-label="Good Burrow app library">
             <div class="app-library">
