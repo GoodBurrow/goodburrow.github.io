@@ -55,27 +55,29 @@
       .nav-links a { transition: color .18s ease; }
       .nav-links a:hover { color: var(--clay); }
 
-      .hero { padding: 112px 0 132px; }
-      .hero-grid { display: grid; grid-template-columns: minmax(300px, .72fr) minmax(560px, 1.28fr); gap: clamp(44px, 5vw, 72px); align-items: center; }
+      .hero { padding: 92px 0 112px; }
+      .hero-grid { display: grid; grid-template-columns: 1fr; gap: 44px; }
+      .hero-intro { display: grid; grid-template-columns: minmax(300px, .8fr) minmax(360px, 1.2fr); gap: 18px clamp(48px, 7vw, 100px); align-items: end; }
+      .hero-intro .label { grid-column: 1 / -1; }
       .label { margin: 0 0 22px; color: var(--clay); font-size: .68rem; font-weight: 850; letter-spacing: .18em; text-transform: uppercase; }
       .hero .label { color: #69737c; }
       h1, h2, h3 { text-wrap: balance; }
       h1, h2, h3 { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       h1 { margin: 0; font-size: clamp(3.8rem, 5vw, 5.4rem); font-weight: 800; line-height: .96; letter-spacing: -.045em; word-spacing: .04em; }
-      .hero-copy { max-width: 430px; margin: 26px 0 0; color: #5c655e; font-size: clamp(1.08rem, 1.65vw, 1.3rem); line-height: 1.55; }
+      .hero-copy { max-width: 520px; margin: 0 0 8px; color: #5c655e; font-size: clamp(1.08rem, 1.65vw, 1.3rem); line-height: 1.55; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
       .button { display: inline-flex; align-items: center; justify-content: center; min-height: 47px; padding: 0 19px; border: 1px solid var(--line); border-radius: 999px; font-size: .91rem; font-weight: 780; transition: transform .18s ease, background .18s ease, border-color .18s ease; }
       .button:hover { transform: translateY(-2px); }
       .button.primary { border-color: var(--forest); background: var(--forest); color: var(--cream); box-shadow: 0 12px 30px rgba(41, 66, 57, .2); }
       .button.secondary:hover { border-color: rgba(183, 102, 79, .5); background: rgba(255,250,242,.55); }
 
-      .burrow-scene { position: relative; min-height: 510px; isolation: isolate; }
+      .burrow-scene { position: relative; min-height: 300px; isolation: isolate; }
       .app-library { position: absolute; inset: 8px 0 0; overflow: hidden; display: flex; padding: 28px; border: 1px solid rgba(35,45,53,.13); border-radius: 24px; background: linear-gradient(145deg, #ffffff, #edf1f4 76%); box-shadow: 0 24px 68px rgba(38,48,56,.13); flex-direction: column; }
       .library-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(35,45,53,.12); color: #182128; }
       .library-title { display: inline-flex; align-items: center; gap: 10px; font-size: .84rem; font-weight: 800; letter-spacing: -.01em; }
       .library-title::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #65717c; box-shadow: 0 0 0 5px rgba(101,113,124,.1); }
       .library-count { color: #747e87; font: 650 .67rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; }
-      .library-grid { display: grid; min-height: 0; flex: 1; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-content: center; }
+      .library-grid { display: grid; min-height: 0; flex: 1; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; align-content: center; }
       .library-app { display: grid; min-width: 0; padding: 19px 8px 15px; border: 1px solid rgba(35,45,53,.11); border-radius: 17px; background: rgba(255,255,255,.76); color: #182128; place-items: center; transition: transform .18s ease, background .18s ease, box-shadow .18s ease; }
       .library-app:hover { transform: translateY(-3px); background: #fff; box-shadow: 0 12px 28px rgba(38,48,56,.1); }
       .library-app img { width: 82px; height: 82px; border-radius: 19px; object-fit: cover; box-shadow: 0 12px 22px rgba(38,48,56,.14); }
@@ -150,8 +152,11 @@
       }
       @media (max-width: 860px) {
         .hero { padding-top: 70px; }
-        .hero-grid { grid-template-columns: 1fr; }
+        .hero-intro { grid-template-columns: 1fr; gap: 18px; }
+        .hero-intro .label { grid-column: auto; }
+        .hero-copy { margin: 0; }
         .burrow-scene { width: min(100%, 600px); min-height: 480px; }
+        .library-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
         .archive, .chat { grid-column: auto; }
@@ -238,7 +243,7 @@
     <main>
       <section class="hero">
         <div class="shell hero-grid">
-          <div>
+          <div class="hero-intro">
             <p class="label">Independent software studio</p>
             <h1>Good Burrow</h1>
             <p class="hero-copy">Thoughtful apps for Mac, browsers, and the web.</p>
