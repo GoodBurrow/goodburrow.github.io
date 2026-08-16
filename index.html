@@ -76,7 +76,7 @@
       .library-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(35,45,53,.12); color: #182128; }
       .library-title { display: inline-flex; align-items: center; gap: 10px; font-size: .84rem; font-weight: 800; letter-spacing: -.01em; }
       .library-count { color: #747e87; font: 650 .67rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; }
-      .library-grid { display: grid; min-height: 0; flex: 1; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; align-content: center; }
+      .library-grid { display: grid; min-height: 0; flex: 1; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; align-content: center; }
       .library-app { display: grid; min-width: 0; padding: 19px 8px 15px; border: 1px solid rgba(35,45,53,.11); border-radius: 17px; background: rgba(255,255,255,.76); color: #182128; place-items: center; transition: transform .18s ease, background .18s ease, box-shadow .18s ease; }
       .library-app:hover { transform: translateY(-3px); background: #fff; box-shadow: 0 12px 28px rgba(38,48,56,.1); }
       .library-app img { width: 82px; height: 82px; border-radius: 19px; object-fit: cover; box-shadow: 0 12px 22px rgba(38,48,56,.14); }
@@ -106,6 +106,12 @@
       .license .product-copy > p:not(.product-tag) { max-width: 100%; margin-top: 18px; color: #c7d1ca; font-size: .94rem; line-height: 1.55; }
       .license .button { position: absolute; right: 32px; bottom: 32px; min-height: 44px; margin: 0; padding-inline: 16px; border-color: rgba(255,250,242,.22); background: rgba(255,250,242,.08); font-size: .86rem; }
       .license-mascot { position: absolute; left: 20px; bottom: -8px; z-index: 3; display: block; width: 42%; height: 48%; margin: 0; object-fit: contain; object-position: left bottom; filter: drop-shadow(0 18px 25px rgba(5,15,12,.3)); }
+      .anthora { grid-column: 1 / -1; min-height: 570px; background: #dce7ee; color: var(--ink); }
+      .anthora .product-tag { color: #536d80; }
+      .anthora .product-copy { max-width: 465px; }
+      .anthora .product-copy > p:not(.product-tag) { color: #4f5c64; }
+      .anthora > img { position: absolute; right: -3%; bottom: -3%; width: min(760px, 60%); border: 1px solid rgba(18,24,21,.12); border-radius: 20px; box-shadow: 0 24px 55px rgba(38,48,56,.18); transform: rotate(-1deg); }
+      .anthora .button { border-color: var(--ink); background: var(--ink); color: #fff; }
       .archive { grid-column: 1 / -1; min-height: 530px; background: #e1e9e2; color: var(--ink); }
       .archive .product-tag { color: var(--forest); }
       .archive .product-copy { max-width: 460px; }
@@ -134,8 +140,8 @@
       .footer-links a:hover { color: var(--clay); }
 
       @media (max-width: 1240px) {
-        .archive, .chat { min-height: 0; }
-        .archive > img, .chat > img {
+        .anthora, .archive, .chat { min-height: 0; }
+        .anthora > img, .archive > img, .chat > img {
           display: block;
           position: relative;
           right: auto;
@@ -155,10 +161,10 @@
         .hero-intro .label { grid-column: auto; }
         .hero-copy { margin: 0; }
         .burrow-scene { width: min(100%, 600px); min-height: 480px; }
-        .library-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .library-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
         .section-head { grid-template-columns: 1fr; gap: 16px; }
         .product-list { grid-template-columns: 1fr; }
-        .archive, .chat { grid-column: auto; }
+        .anthora, .archive, .chat { grid-column: auto; }
         .web-app-list { grid-template-columns: 1fr; }
         .product { min-height: 460px; }
       }
@@ -187,8 +193,8 @@
         .product { min-height: 430px; padding: 27px; border-radius: 18px; }
         .product h3 { font-size: clamp(2.2rem, 11vw, 3rem); }
         .product-copy > p:not(.product-tag) { font-size: 1rem; line-height: 1.55; }
-        .archive, .chat { min-height: 0; padding-bottom: 0; }
-        .archive > img, .chat > img {
+        .anthora, .archive, .chat { min-height: 0; padding-bottom: 0; }
+        .anthora > img, .archive > img, .chat > img {
           position: relative;
           right: auto;
           bottom: auto;
@@ -214,6 +220,7 @@
         *, *::before, *::after { transition: none !important; }
       }
 
+      .anthora .product-copy::before,
       .archive .product-copy::before,
       .chat .product-copy::before {
         content: "";
@@ -227,6 +234,7 @@
         background-size: cover;
         box-shadow: 0 12px 28px rgba(25,38,31,.16);
       }
+      .anthora .product-copy::before { background-image: url('/assets/product-icons/anthora.png'); }
       .archive .product-copy::before { background-image: url('/social-archive/assets/social-archive-icon.png'); }
       .chat .product-copy::before { background-image: url('/chat-library/assets/chat-library-icon.png'); }
     </style>
@@ -248,8 +256,9 @@
           </div>
           <div class="burrow-scene" aria-label="Good Burrow app library">
             <div class="app-library">
-              <div class="library-bar"><span class="library-title">Good Burrow Library</span><span class="library-count">6 products</span></div>
+              <div class="library-bar"><span class="library-title">Good Burrow Library</span><span class="library-count">7 products</span></div>
               <div class="library-grid">
+                <a class="library-app" href="/anthora/"><img src="/assets/product-icons/anthora.png" alt=""><strong>Anthora</strong><small>Mac app</small></a>
                 <a class="library-app" href="/social-archive/"><img src="/assets/product-icons/social-archive.png" alt=""><strong>Social Archive</strong><small>Mac app</small></a>
                 <a class="library-app" href="/chat-library/"><img src="/assets/product-icons/chat-library.png" alt=""><strong>Chat Library</strong><small>Mac app</small></a>
                 <a class="library-app" href="/Burrowmarks/"><img src="/assets/product-icons/burrowmarks.png" alt=""><strong>Burrowmarks</strong><small>Extension</small></a>
@@ -266,6 +275,16 @@
         <div class="shell">
           <div class="section-head"><h2>Products</h2><p>Mac apps and browser extensions from Good Burrow.</p></div>
           <div class="product-list">
+            <a class="product anthora" href="/anthora/">
+              <div class="product-copy">
+                <p class="product-tag">Local-first Mac app · Coming soon</p>
+                <h3>Anthora</h3>
+                <p>Turn photo and video folders into a private visual library. Browse, search, play media, and review likely duplicates while originals stay where they are.</p>
+                <span class="button">View Anthora</span>
+              </div>
+              <img src="/anthora/assets/collections.webp" alt="Anthora showing media folders in a bright local library">
+            </a>
+
             <a class="product archive" href="/social-archive/">
               <div class="product-copy">
                 <p class="product-tag">Private Mac utility</p>
@@ -338,7 +357,7 @@
     </main>
 
     <footer>
-      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/social-archive/">Social Archive</a><a href="/chat-library/">Chat Library</a><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">Browser Extension License Kit</a><a href="/Siggy/">Siggy</a><a href="/MailPaw/">MailPaw</a><a href="https://github.com/GoodBurrow">GitHub</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
+      <div class="shell footer-row"><span>© Good Burrow</span><nav class="footer-links" aria-label="Footer navigation"><a href="/anthora/">Anthora</a><a href="/social-archive/">Social Archive</a><a href="/chat-library/">Chat Library</a><a href="/Burrowmarks/">Burrowmarks</a><a href="/extension-license-kit/">Browser Extension License Kit</a><a href="/Siggy/">Siggy</a><a href="/MailPaw/">MailPaw</a><a href="https://github.com/GoodBurrow">GitHub</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div>
     </footer>
   </body>
 </html>
