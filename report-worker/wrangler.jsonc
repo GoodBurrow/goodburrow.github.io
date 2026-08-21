@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "good-burrow-reports",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-20",
+  "send_email": [
+    { "name": "REPORT_EMAIL" }
+  ],
+  "vars": {
+    "REPORT_FROM": "reports@goodburrow.com"
+  }
+}
