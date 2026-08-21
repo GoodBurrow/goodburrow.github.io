@@ -46,12 +46,11 @@
     <input id="os" name="os" type="hidden">
     <input id="opened-at" name="openedAt" type="hidden">
     <p class="small">Do not include passwords, private conversations, exported archives, filenames, or other sensitive information. The app name, app version, and operating-system version shown above are included with this report. No files or app content are attached.</p>
-    <button type="submit">Send report</button>
+    <button type="submit">Open email draft</button>
     <p id="status" role="status" aria-live="polite"></p>
   </form>
 </main>
 <script>
-  const endpoint = "https://good-burrow-reports.burrowmarks-site.workers.dev/";
   const params = new URLSearchParams(location.search);
   const safe = (value, fallback) => (value || fallback).slice(0, 160);
   document.querySelector("#app-id").value = safe(params.get("app"), "unknown");
@@ -60,23 +59,15 @@
   document.querySelector("#os").value = safe(params.get("os"), "Unknown");
   document.querySelector("#opened-at").value = Date.now().toString();
 
-  document.querySelector("#report-form").addEventListener("submit", async (event) => {
+  document.querySelector("#report-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const button = form.querySelector("button");
     const status = document.querySelector("#status");
-    button.disabled = true;
-    status.textContent = "Sending…";
-    try {
-      const response = await fetch(endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
-      if (!response.ok) throw new Error("send failed");
-      form.reset();
-      status.textContent = "Report sent. Thank you.";
-      button.hidden = true;
-    } catch {
-      status.textContent = "The report could not be sent. Please try again later.";
-      button.disabled = false;
-    }
+    const values = Object.fromEntries(new FormData(form));
+    const subject = `[${values.appName || "Good Burrow app"}] Problem report`;
+    const body = `App: ${values.appName || values.app}\nVersion: ${values.version || "Unknown"}\nOS: ${values.os || "Unknown"}\nReply email: ${values.replyEmail || "Not provided"}\n\nWhat happened\n${values.happened}\n\nWhat was expected\n${values.expected}`;
+    status.textContent = "Your email app should open with a draft. Review it before sending.";
+    location.href = `mailto:hello@goodburrow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 </script>
 </body>
