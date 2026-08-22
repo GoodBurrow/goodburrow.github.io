@@ -2,7 +2,7 @@
 
 This public repository contains Good Burrow's product homepage, the Burrowmarks
 marketing and license pages, and product pages with fictional sample exports
-for Social Archive and Chat Library. The Anthora page is prepared locally and
+for Social Library and Chat Library. The Anthora page is prepared locally and
 remains marked as awaiting final approval until checkout and delivery have
 passed a real test.
 
